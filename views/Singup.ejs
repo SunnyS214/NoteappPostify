@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+
+</head>
+<body class='bg-zinc-700 h-screen w-full'>
+    <div class='flex justify-center items-center  h-screen w-full'>
+        <form action="/create" method="post" class="flex flex-col gap-4">
+            <h1 class="flex text-zinc-300 justify-center font-semibold text-2xl">Create Account</h1>
+
+            <input type="text" placeholder="Name" name="Name" class='outline-none  p-2 rounded-lg font-semibold bg-zinc-400 text-black'>
+            <input type="email" placeholder="Email" name="Email" class='outline-none p-2 rounded-lg font-semibold bg-zinc-400 text-black'> 
+            <input type="password" placeholder="Password" name="Password" class=' 
+            outline-none p-2 rounded-lg font-semibold bg-zinc-400 text-black'>
+            <button type="submit" class='bg-blue-500 p-2 rounded-lg font-semibold text-black'>Create User</button>
+<h1 class="flex text-zinc-400 px-4 justify-between font-medium text-lg">
+    <a href="/login" class=' underline'>Login</a>
+    <a href="" class='underline'>Post</a>
+
+</h1>
+        </form>
+        
+    </div>
+   
+
+</body>
+</html>
