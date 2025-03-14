@@ -1,5 +1,5 @@
 const mongoose=require("mongoose")
-mongoose.connect("mongodb://127.0.0.1:27017/noteapp1march25")
+mongoose.connect(process.env.MONGO_URL)
 const UserSchema=mongoose.Schema({
     Name:{
         type:String,

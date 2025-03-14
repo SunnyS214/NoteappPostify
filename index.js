@@ -1,8 +1,10 @@
 const express = require('express');
+require('dotenv').config();
 const UserModel = require('./models/UserModel');
 const PostModel = require('./models/PostsModel');
 const app = express();
-const port = 3000;
+const port = process.env.PORT||3000;
+
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcrypt');
 const jwt = require('jsonwebtoken');
@@ -18,10 +20,12 @@ app.use(cookieParser());
 
 app.get('/', (req, res) => {
     res.redirect('/singup');
+    
 });
 
 app.get('/singup', (req, res) => {
     res.render('Singup');
+    
 });
 
 app.post('/create', async (req, res) => {
