@@ -19,7 +19,8 @@ app.use(cookieParser());
 
 
 app.get('/', (req, res) => {
-    res.send("new world")
+    res.render('Singup');
+   
     // res.redirect('/singup');
     
 });
