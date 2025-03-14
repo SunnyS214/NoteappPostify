@@ -19,9 +19,9 @@ app.use(cookieParser());
 
 
 app.get('/', (req, res) => {
-    res.render('Singup');
    
-    // res.redirect('/singup');
+   
+    res.redirect('/singup');
     
 });
 
