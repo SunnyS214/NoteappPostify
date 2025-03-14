@@ -6,7 +6,7 @@ const app = express();
 const port = process.env.PORT||3000;
 
 const cookieParser = require('cookie-parser');
-const bcrypt = require('bcrypt');
+const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
 
 app.set('view engine', 'ejs');
