@@ -1,32 +1,3 @@
-# Blog Application with Authentication  
-
-A full-stack Node.js blog application built with **Express**, **MongoDB**, and **EJS**.  
-This app allows users to **sign up, log in, create posts, edit posts, delete posts, and manage sessions** securely with **JWT authentication and bcrypt password hashing**.  
-
----
-
-## 🚀 Features  
-
-✨ User **Signup & Login** with secure password hashing  
-🔐 **JWT-based Authentication** with cookies  
-📝 Create, edit, and delete blog posts  
-👤 User-specific posts management  
-⚡ Session handling with middleware  
-🎨 **EJS Templating Engine** for clean UI  
-🛠️ Fully functional **CRUD operations** for posts  
-
----
-
-## 🛠 Tech Stack  
-
-🖥️ **Backend:** Node.js, Express.js  
-🎭 **Frontend:** EJS (Embedded JavaScript Templates)  
-🗄️ **Database:** MongoDB (Mongoose ODM)  
-🔑 **Authentication:** JWT, bcrypt.js  
-📦 **Other Tools:** dotenv, cookie-parser, path  
-
----
-
 # 💬 MERN Stack Real-Time Chat Application  
 
 A full-stack **real-time chat application** built with the MERN stack and **Socket.IO**, featuring authentication, live messaging, and responsive UI.  
@@ -93,11 +64,7 @@ Use the following test account to explore the chat app without signing up:
 
 ---
 
-## 📸 Screenshots 
-<img width="1353" height="601" alt="image" src="https://github.com/user-attachments/assets/3d89a4bc-54a6-4ed0-af1e-41c7c6f1b43c" />  
-<img width="1349" height="609" alt="image" src="https://github.com/user-attachments/assets/46ccca14-ca09-4922-9325-e0997e268845" />  
-<img width="1344" height="597" alt="image" src="https://github.com/user-attachments/assets/e5bf5c50-7bd5-4c3d-a7d0-a0720bdd5a4e" />  
-<img width="1338" height="594" alt="image" src="https://github.com/user-attachments/assets/c7568abc-dfb4-4a17-8cc0-bb502c460ff9" />  
+  
 
 
 ## 📸 Screenshots  
@@ -159,5 +126,6 @@ Use the following test account to explore the chat app without signing up:
 👤 Users can only manage their own posts.  
 
 ---
+
 
 
