@@ -1,107 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Post Feed</title>
-    <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-    <!-- Include Animate.css -->
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css" />
-    <!-- Include SortableJS -->
-    <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Post Feed</title>
+  <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"/>
+  <script src="https://cdn.jsdelivr.net/npm/sortablejs@latest/Sortable.min.js"></script>
 </head>
-<body class="bg-zinc-700 text-zinc-300">
-    <!-- Header -->
-    <header class="bg-zinc-800 shadow-lg">
-        <div class="container mx-auto px-4 py-6 flex justify-between items-center">
-            <h1 class="text-2xl font-bold text-yellow-500">Post Feed</h1>
-            <a href="/logout" class="text-red-500 font-semibold hover:text-red-400 transition duration-300">Logout</a>
-        </div>
-    </header>
+<body class="bg-zinc-700 text-zinc-300 min-h-screen flex flex-col justify-between">
 
-    <!-- Main Content -->
-    <main class="flex-grow container mx-auto px-4 py-8">
-        <div class="text-center">
-            <h2 class="text-3xl font-medium mb-4">Hello, <%= user.Name %>!</h2>
-            <p class="text-zinc-400 mb-8">Share your thoughts with the world.</p>
-        </div>
+  
+  <header class="bg-zinc-800 shadow-lg">
+    <div class="container mx-auto px-4 py-4 flex flex-col sm:flex-row justify-between items-center gap-2">
+      <h1 class="text-2xl font-bold text-yellow-500">Post Feed</h1>
+      <a href="/logout" class="text-red-500 font-semibold hover:text-red-400 transition duration-300">Logout</a>
+    </div>
+  </header>
 
-        <!-- Create Post Form -->
-        <div class="max-w-2xl mx-auto bg-zinc-800 p-6 rounded-lg shadow-lg">
-            <form method="post" action="/postcreate" class="space-y-4">
-                <input 
-                    type="text" 
-                    placeholder="Title" 
-                    name="title" 
-                    class="w-full p-3 rounded-lg bg-zinc-700 outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300"
-                >
-                <textarea 
-                    placeholder="What's on your mind?" 
-                    name="body" 
-                    class="w-full p-3 rounded-lg bg-zinc-700 outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 resize-none"
-                    rows="4"
-                ></textarea>
-                <button 
-                    type="submit" 
-                    class="w-full bg-yellow-500 text-black font-semibold p-3 rounded-lg hover:bg-yellow-600 transition duration-300"
-                >
-                    Create Post
-                </button>
-            </form>
-        </div>
 
-        <!-- Posts Section -->
-        <div class="mt-12">
-            <h3 class="text-2xl font-medium text-center mb-6">Your Posts</h3>
-            <!-- Add an ID to the posts container -->
-            <div id="posts-container" class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6">
-                <% 
-                    const colors = ["bg-yellow-400", "bg-blue-400", "bg-green-400", "bg-red-400", "bg-purple-400", "bg-pink-400"];
-                    let colorIndex = 0;
-                %>
-                <% user.posts.forEach((e) => { %>
-                    <div class="<%= colors[colorIndex % colors.length] %> p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-<%= colorIndex %>s">
-                        <h4 class="text-xl font-semibold text-center text-zinc-900 mb-4"><%= e.title %></h4>
-                        <p class="text-lg text-center text-zinc-700"><%= e.body %></p>
-                        <!-- Edit and Remove Buttons -->
-                        <div class="flex justify-between mt-4">
-                            <a 
-                                href="/editpost/<%= e._id %>" 
-                                class="bg-blue-500 text-white px-4 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
-                            >
-                                Edit
-                            </a>
-                            <a 
-                                href="/removepost/<%= e._id %>" 
-                                class="bg-red-500 text-white px-4 py-2 rounded-lg hover:bg-red-600 transition duration-300"
-                            >
-                                Remove
-                            </a>
-                        </div>
-                    </div>
-                    <% colorIndex++; %>
-                <% }) %>
+  <main class="flex-grow container mx-auto px-4 py-8">
+   
+    <div class="text-center">
+      <h2 class="text-2xl sm:text-3xl font-medium mb-4">Hello, <%= user.Name %>!</h2>
+      <p class="text-zinc-400 mb-6 text-base sm:text-lg">Share your thoughts with the world.</p>
+    </div>
+
+    <!-- Create Post Form -->
+    <div class="max-w-2xl mx-auto bg-zinc-800 p-4 sm:p-6 rounded-lg shadow-lg">
+      <form method="post" action="/postcreate" class="space-y-4">
+        <input 
+          type="text" 
+          placeholder="Title" 
+          name="title" 
+          class="w-full p-3 rounded-lg bg-zinc-700 outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300"
+        />
+        <textarea 
+          placeholder="What's on your mind?" 
+          name="body" 
+          rows="4"
+          class="w-full p-3 rounded-lg bg-zinc-700 outline-none focus:ring-2 focus:ring-yellow-500 transition duration-300 resize-none"
+        ></textarea>
+        <button 
+          type="submit" 
+          class="w-full bg-yellow-500 text-black font-semibold p-3 rounded-lg hover:bg-yellow-600 transition duration-300"
+        >
+          Create Post
+        </button>
+      </form>
+    </div>
+
+    
+    <div class="mt-12">
+      <h3 class="text-xl sm:text-2xl font-medium text-center mb-6">Your Posts</h3>
+      <div id="posts-container" class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+        <% 
+          const colors = ["bg-yellow-400", "bg-blue-400", "bg-green-400", "bg-red-400", "bg-purple-400", "bg-pink-400"];
+          let colorIndex = 0;
+        %>
+        <% user.posts.forEach((e) => { %>
+          <div class="<%= colors[colorIndex % colors.length] %> p-4 sm:p-6 rounded-lg shadow-lg transform hover:scale-105 transition duration-300 animate__animated animate__fadeInUp animate__delay-<%= colorIndex %>s">
+            <h4 class="text-lg sm:text-xl font-bold text-center text-zinc-900 mb-3"><%= e.title %></h4>
+            <p class="text-base sm:text-lg text-center font-medium text-zinc-700"><%= e.body %></p>
+            <div class="flex justify-between mt-4 flex-wrap gap-2">
+              <a 
+                href="/editpost/<%= e._id %>" 
+                class="flex-1 text-center bg-blue-500 text-white px-3 py-2 rounded-lg hover:bg-blue-600 transition duration-300"
+              >
+                Edit
+              </a>
+              <a 
+                href="/removepost/<%= e._id %>" 
+                class="flex-1 text-center bg-red-500 text-white px-3 py-2 rounded-lg hover:bg-red-600 transition duration-300"
+              >
+                Remove
+              </a>
             </div>
-        </div>
-    </main>
+          </div>
+          <% colorIndex++; %>
+        <% }) %>
+      </div>
+    </div>
+  </main>
 
-    <!-- Footer -->
-    <footer class="bg-zinc-800 mt-12 py-6 text-center">
-        <p class="text-zinc-400">© 2023 Post Feed. All rights reserved.</p>
-    </footer>
+  
+ 
 
-    <!-- Initialize SortableJS -->
-    <script>
-        document.addEventListener("DOMContentLoaded", () => {
-            // Initialize SortableJS on the posts container
-            const postsContainer = document.getElementById("posts-container");
-            new Sortable(postsContainer, {
-                animation: 150, // Animation duration in milliseconds
-                ghostClass: "bg-zinc-600", // Class for the ghost element
-                chosenClass: "bg-zinc-500", // Class for the chosen element
-                dragClass: "bg-zinc-400", // Class for the dragging element
-            });
-        });
-    </script>
+
+  <script>
+    document.addEventListener("DOMContentLoaded", () => {
+      const postsContainer = document.getElementById("posts-container");
+      new Sortable(postsContainer, {
+        animation: 150,
+        ghostClass: "bg-zinc-600",
+        chosenClass: "bg-zinc-500",
+        dragClass: "bg-zinc-400",
+      });
+    });
+  </script>
 </body>
 </html>

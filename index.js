@@ -8,7 +8,9 @@ const port = process.env.PORT||3000;
 const cookieParser = require('cookie-parser');
 const bcrypt = require('bcryptjs');
 const jwt = require('jsonwebtoken');
+const path = require('path');
 
+app.set('views', path.join(__dirname, 'views'));
 app.set('view engine', 'ejs');
 app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
@@ -21,12 +23,12 @@ app.use(cookieParser());
 app.get('/', (req, res) => {
    
    
-    res.redirect('/singup');
+    res.redirect('/signup');
     
 });
 
-app.get('/singup', (req, res) => {
-    res.render('Singup');
+app.get('/signup', (req, res) => {
+    res.render('Signup');
     
 });
 
@@ -83,7 +85,6 @@ app.post('/postcreate', IsloggedIn, async (req, res) => {
     user.posts.push(newpost._id);
     await user.save();
 
-    // Fetch the updated user data with the new post
     let updatedUser = await UserModel.findOne({ Email: req.user.Email }).populate('posts');
     res.render('user', { user: updatedUser });
 });
@@ -104,7 +105,7 @@ app.post('/editpost/:postid', IsloggedIn, async (req, res) => {
 });
 
 
-//deleter route
+
 app.get('/removepost/:postid', IsloggedIn, async (req, res) => {
     let id=req.params.postid
    
