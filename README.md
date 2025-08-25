@@ -60,7 +60,7 @@ Use the following test account to explore the chat app without signing up:
 ---
 
 ## 🌍 Live Demo  
-🚀 [Click here to access Live Demo]()  
+🚀 [Click here to access Live Demo](https://postify-orcin.vercel.app/signup)  
 
 ---
 
@@ -126,6 +126,7 @@ Use the following test account to explore the chat app without signing up:
 👤 Users can only manage their own posts.  
 
 ---
+
 
 
 
