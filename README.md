@@ -27,6 +27,79 @@ This app allows users to **sign up, log in, create posts, edit posts, delete pos
 
 ---
 
+# 💬 MERN Stack Real-Time Chat Application  
+
+A full-stack **real-time chat application** built with the MERN stack and **Socket.IO**, featuring authentication, live messaging, and responsive UI.  
+
+---
+
+## 🚀 Features
+🔑 User Authentication (Register/Login with JWT & bcrypt)  
+👤 User Context with React Context API  
+💬 Real-time Messaging using Socket.IO  
+🟢 Online/Offline User Status  
+🖥️ Responsive UI with Bootstrap + Tailwind  
+🔒 Secure password hashing with bcrypt  
+🌐 Protected Routes (Only logged-in users can access Chat)  
+
+---
+
+## 🛠️ Tech Stack
+### Frontend:
+⚛️ React.js (Vite)  
+🌐 React Router DOM  
+🧩 Context API (Auth + Chat state management)  
+🎨 Bootstrap & Tailwind CSS  
+
+### Backend:
+🖥️ Node.js  
+📦 Express.js  
+🗄️ MongoDB (Mongoose)  
+💬 Socket.IO  
+🔑 JWT Authentication  
+🔒 bcrypt for password hashing  
+
+---
+
+## 📂 Project Structure  
+
+```
+├── backend
+│   ├── controllers
+│   ├── models
+│   ├── routes
+│   └── server.js
+├── frontend
+│   ├── src
+│   │   ├── components
+│   │   ├── context
+│   │   ├── pages
+│   │   └── App.jsx
+└── package.json
+```
+
+---
+
+## 🔑 Demo Login Credentials
+Use the following test account to explore the chat app without signing up:  
+
+- **Email:** `newuser12@mail.com`  
+- **Password:** `Newuser@1717`  
+
+---
+
+## 🌍 Live Demo  
+🚀 [Click here to access Live Demo]()  
+
+---
+
+## 📸 Screenshots 
+<img width="1353" height="601" alt="image" src="https://github.com/user-attachments/assets/3d89a4bc-54a6-4ed0-af1e-41c7c6f1b43c" />  
+<img width="1349" height="609" alt="image" src="https://github.com/user-attachments/assets/46ccca14-ca09-4922-9325-e0997e268845" />  
+<img width="1344" height="597" alt="image" src="https://github.com/user-attachments/assets/e5bf5c50-7bd5-4c3d-a7d0-a0720bdd5a4e" />  
+<img width="1338" height="594" alt="image" src="https://github.com/user-attachments/assets/c7568abc-dfb4-4a17-8cc0-bb502c460ff9" />  
+
+
 ## 📸 Screenshots  
 
 ### 📝 Signup Page  
@@ -86,4 +159,5 @@ This app allows users to **sign up, log in, create posts, edit posts, delete pos
 👤 Users can only manage their own posts.  
 
 ---
+
 
