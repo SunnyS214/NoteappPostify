@@ -60,16 +60,16 @@ Use the following test account to explore the chat app without signing up:
 ## 📸 Screenshots  
 
 ### 📝 Signup Page  
-<img width="913" height="593" alt="image" src="https://github.com/user-attachments/assets/c5fc136b-fc88-4fbb-aa65-1e36885501e3" />
- 
+<img width="758" height="585" alt="image" src="https://github.com/user-attachments/assets/f719f934-452a-4239-b187-0783bfcf015f" />
+
 
 ### 🔑 Login Page  
-<img width="1297" height="572" alt="image" src="https://github.com/user-attachments/assets/c7882522-5040-4fc4-82d9-c42806a0ad68" />
+<img width="807" height="529" alt="image" src="https://github.com/user-attachments/assets/3c9d3fac-7a2b-486b-930b-37e18829741e" />
+
 
 
 ### 📂 Dashboard (User with Posts)  
-<img width="1311" height="598" alt="image" src="https://github.com/user-attachments/assets/551dbb99-bcb8-4583-b6a2-ab18b2d65ad0" />
-<img width="1293" height="571" alt="image" src="https://github.com/user-attachments/assets/c270682e-3f27-4f44-aa3e-585f87a8da27" />
+
 
 ## 📂 Project Structure  
 
@@ -116,6 +116,7 @@ Use the following test account to explore the chat app without signing up:
 👤 Users can only manage their own posts.  
 
 ---
+
 
 
 
